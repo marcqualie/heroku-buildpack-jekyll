@@ -13,7 +13,7 @@ Create a new app:
 
 Add the two buildpacks:
 
-> heroku buildpacks:set https://github.com/dmathieu/heroku-buildpack-jekyll  
+> heroku buildpacks:set https://github.com/marcqualie/heroku-buildpack-jekyll  
 > heroku buildpacks:add https://github.com/heroku/heroku-buildpack-static
 
 Push your jekyll code to this new app.
