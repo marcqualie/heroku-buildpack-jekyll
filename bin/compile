@@ -20,4 +20,4 @@ pwd
 cd $build_dir
 pwd
 echo "Jekyll version: $(bundle exec jekyll --version)"
-bundle exec $bp_dir/scripts/precompile
+bundle exec jekyll build --destination public_html
