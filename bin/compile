@@ -14,7 +14,7 @@ echo "Ruby version: $(ruby --version)"
 gem install bundler
 echo "Bundler version: $(bundler --version)"
 
-bundle install --path $cache_dir
+bundle install --gemfile $build_dir/Gemfile --path $cache_dir
 
 echo "Jekyll version: $(bundle exec jekyll --version)"
 bundle exec $bp_dir/scripts/precompile
