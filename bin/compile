@@ -16,5 +16,8 @@ echo "Bundler version: $(bundler --version)"
 
 bundle install --gemfile $build_dir/Gemfile --path $cache_dir
 
+pwd
+cd $build_dir
+pwd
 echo "Jekyll version: $(bundle exec jekyll --version)"
 bundle exec $bp_dir/scripts/precompile
