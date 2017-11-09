@@ -9,7 +9,12 @@ export GEM_HOME=$bp_dir/vendor/gems
 export GEM_PATH=$bp_dir/vendor/gems
 export PATH=$PATH:$bp_dir/vendor/gems/bin
 
+echo "Ruby version: $(ruby --version)"
+
 gem install bundler
+echo "Bundler version: $(bundler --version)"
+
 bundle install --path $cache_dir
 
+echo "Jekyll version: $(bundle exec jekyll --version)"
 bundle exec $bp_dir/scripts/precompile
