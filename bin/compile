@@ -16,8 +16,13 @@ echo "Bundler version: $(bundler --version)"
 
 bundle install --gemfile $build_dir/Gemfile --path $cache_dir
 
+# heroku-buildpack-static requires static.json to be present
+if [ ! -f $build_dir/static.json ]; then
+  cp $bp_dir/static.json $build_dir/static.json
+fi
+
 pwd
 cd $build_dir
 pwd
 echo "Jekyll version: $(bundle exec jekyll --version)"
-bundle exec jekyll build --destination public_html
+bundle exec jekyll build
